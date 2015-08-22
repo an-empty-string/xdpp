@@ -1,0 +1,34 @@
+include:
+    - colors.def
+
+config:
+    URxvt:
+        scrollBar: false
+        fonts:
+            - face: source code pro
+              size: 11
+            - face: dejavu sans mono
+              size: 11
+        perl-ext:
+            - default
+            - clipboard
+            - url-select
+            - keyboard-select
+        keysym:
+            M-u: perl:url-select:select_next
+        url-select:
+            launcher: /usr/bin/google-chrome-stable
+            underline: true
+        clipboard:
+            copycmd: xsel -i
+            pastecmd: xsel -o
+        meta8: false
+        letterSpace: -1
+        matcher:
+            button: 1
+        perl-lib: /usr/lib/urxvt/perl
+        depth: 32
+        color:
+            kind: background
+            opacity: 90
+            color: "#1d1f21"
